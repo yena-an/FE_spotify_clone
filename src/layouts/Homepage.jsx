@@ -9,7 +9,7 @@ import {
   getPopularRadio,
   getFeaturedCharts,
 } from "../utils/spotifyApi";
-import "../styles/HomePage.css";
+import "../styles/Homepage.css";
 import Footer from "../components/Footer";
 
 const HomePage = () => {
