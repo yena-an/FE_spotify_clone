@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 64px;
+  background-color: var(--color-black);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* 왼쪽 */
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-gray-md);
+  border-radius: var(--border-radius-md);
+  padding: 0 16px;
+  height: 40px;
+  width: 364px;
+  border: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.header__search:hover {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.header__search-icon {
+  color: var(--color-gray);
+  flex-shrink: 0; /*항상 원래 크기 유지 */
+}
+
+.header__search-input {
+  flex: 1; /* 남은 공간 전부 차지 */
+  background: transparent;
+  border: none; /* input은 기본으로 background와 border가 setting됨 */
+  outline: none;
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+}
+
+.header__search-input::placeholder {
+  color: var(--color-gray);
+}
+
+.header__search-divider {
+  width: 1px;
+  height: 15px;
+  background-color: var(--color-gray);
+  flex-shrink: 0;
+}
+
+.header__search-browse {
+  color: var(--color-gray);
+  flex-shrink: 0;
+}
+
+/* 오른쪽 */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__right-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--color-white);
+  margin: 0 8px;
+}

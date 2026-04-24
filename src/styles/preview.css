@@ -1,0 +1,24 @@
+.preview-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #6b21a8, #3b0764, #1e3a8a);
+  z-index: 200;
+}
+
+.preview-banner__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.preview-banner__desc {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+}

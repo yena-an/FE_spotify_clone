@@ -1,0 +1,107 @@
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: var(--color-green-hover);
+  border-top: 0.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 300;
+  color: var(--color-black);
+}
+
+/* 왼쪽 — 곡 정보 */
+.player-bar__track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 280px; /* 고정폭 유지 */
+}
+
+.player-bar__cover {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius-sm);
+  object-fit: cover;
+}
+
+.player-bar__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.player-bar__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-bar__artist {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 가운데 — 컨트롤 */
+.player-bar__controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-bar__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition); /* color, transform 통합 */
+  padding: 4px;
+}
+
+.player-bar__btn--play {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* 원형 유지 */
+}
+
+.player-bar__btn--play:hover {
+  transform: scale(1.06);
+  background-color: var(--color-white);
+}
+
+.player-bar__btn:disabled {
+  cursor: not-allowed;
+}
+
+.player-bar__btn svg {
+  width: 24px; /* 가독성을 위해 살짝 키움 */
+  height: 24px;
+  /* color: black; -> 부모의 color: var(--color-black)을 상속받으므로 삭제 */
+}
+
+/* 오른쪽 — 볼륨 */
+.player-bar__volume {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 280px;
+  justify-content: flex-end;
+}
+
+.player-bar__volume-slider {
+  width: 100px;
+  accent-color: var(--color-black);
+  cursor: pointer;
+}

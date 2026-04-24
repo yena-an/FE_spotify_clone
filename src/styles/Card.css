@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.card:hover {
+  background-color: var(--color-gray-dark);
+}
+
+.card:hover .card__play-button {
+  opacity: 1;
+  transform: translateY(0); /* 위로 올라오는 효과 */
+}
+
+/* 커버 이미지 */
+.card__cover-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 4px; /* 텍스트와 간격 두기 */
+}
+
+.card__cover-wrap--square {
+  border-radius: var(--border-radius-sm);
+}
+
+.card__cover-wrap--circle {
+  border-radius: var(--border-radius-full);
+}
+
+.card__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.card__play-button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: var(--border-radius-full);
+  border: none;
+
+  background-color: var(--color-green);
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(8px);
+  transition: var(--transition);
+}
+
+.card__play-button:hover {
+  background-color: var(--color-green-hover);
+  transition: scale(1.2);
+}
+
+/* 텍스트 */
+.card__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white);
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 최대 2줄 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.card__artist {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-gray);
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 최대 2줄 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+}

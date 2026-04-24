@@ -1,0 +1,92 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  color: var(--color-gray);
+  background-color: transparent; /* 브라우저 기본 흰 배경 제거 */
+  border-radius: var(--border-radius-full);
+}
+
+/* ghost — 배경 없음 */
+.btn--ghost-header:hover {
+  transform: scale(1.04);
+  color: var(--color-white);
+}
+.btn--ghost-underline:hover {
+  text-decoration: underline white;
+}
+
+/* filled — 배경 있음 */
+.btn--filled {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--border-radius-md);
+}
+.btn--filled:hover {
+  transform: scale(1.04);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.btn--filledTwo {
+  background-color: var(--color-gray-md);
+  color: var(--color-white);
+  border-radius: var(--border-radius-md);
+}
+.btn--filledTwo:hover {
+  transform: scale(1.04);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.btn--text-outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: var(--border-radius-md);
+}
+
+.btn--xs {
+  font-size: var(--font-size-xs);
+  height: 24px;
+  padding: 0 8px;
+}
+.btn--sm {
+  font-size: var(--font-size-sm);
+  height: 32px;
+  padding: 0 12px;
+}
+.btn--md {
+  font-size: var(--font-size-md);
+  height: 40px;
+  padding: 0 16px;
+}
+.btn--lg {
+  font-size: var(--font-size-lg);
+  height: 48px;
+  padding: 0 20px;
+}
+
+/* Font weight */
+.btn--fw-light {
+  font-weight: var(--font-weight-light);
+}
+
+.btn--fw-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.btn--fw-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.btn--fw-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--fw-heavy {
+  font-weight: var(--font-weight-heavy);
+}
