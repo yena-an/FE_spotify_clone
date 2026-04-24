@@ -1,7 +1,7 @@
 import Header from "./layouts/Header";
 import LeftBar from "./layouts/LeftSideBar";
 import PlayerBar from "./layouts/PlayerBar";
-import HomePage from "./layouts/HomePage";
+import HomePage from "./layouts/Homepage";
 import "./App.css";
 
 function App() {
